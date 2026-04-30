@@ -1,17 +1,18 @@
 :root {
-  --paper: #F4F5F6;
-  --paper-2: #ECEEF0;
+  --paper: #FBF7F2;
+  --paper-2: #F4ECE3;
   --surface: #FFFFFF;
-  --ink: #0E1217;
-  --ink-2: #2A313A;
-  --ink-3: #5C6671;
-  --ink-4: #8A939D;
-  --rule: #DDE1E5;
-  --rule-2: #EAEDEF;
-  --blue: #2E7AB8;
-  --blue-soft: #EEF3F7;
-  --blue-tint: #DDE8F0;
-  --good: #4A9B7C;
+  --ink: #2A1F2D;
+  --ink-2: #4A3A4D;
+  --ink-3: #7A6B7C;
+  --ink-4: #A89BA8;
+  --rule: #E8DDD0;
+  --rule-2: #F0E7DA;
+  --coral: #FF6B6B;
+  --coral-dark: #E85555;
+  --coral-soft: #FFE8E8;
+  --coral-tint: #FFD4D4;
+  --good: #5BB97C;
   --bad: #C04545;
 }
 
@@ -38,27 +39,18 @@ body {
   margin-bottom: 56px;
 }
 .logo {
-  display: inline-flex; flex-direction: column; align-items: stretch;
+  display: inline-flex; align-items: center; gap: 14px;
+  text-decoration: none;
 }
-.logo-word {
-  font-family: "Newsreader", Georgia, serif;
-  font-weight: 500; font-size: 34px;
-  letter-spacing: -1px;
-  line-height: 1;
-  color: var(--ink);
+.logo-mark {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  display: block;
 }
-.logo-line {
-  position: relative;
-  height: 1px;
-  background: var(--rule);
-  margin-top: 8px;
-  width: 100%;
-}
-.logo-dot {
-  position: absolute;
-  top: -2.5px; left: 68%;
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--blue);
+.logo-wordmark {
+  height: 30px;
+  width: auto;
+  display: block;
 }
 
 /* text hierarchy */
@@ -71,7 +63,7 @@ body {
 h1 {
   font-family: "Newsreader", Georgia, serif;
   font-weight: 500; font-size: 40px;
-  letter-spacing: -1px; line-height: 1.1;
+  letter-spacing: -0.5px; line-height: 1.1;
   margin: 0 0 12px;
   color: var(--ink);
 }
@@ -90,7 +82,7 @@ p.sub {
   margin: 0 0 40px;
 }
 
-a { color: var(--blue); text-decoration: none; }
+a { color: var(--coral-dark); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* section numbering */
@@ -131,7 +123,7 @@ ul.bullets li::before {
   position: absolute;
   left: 0; top: 10px;
   width: 5px; height: 5px; border-radius: 50%;
-  background: var(--blue);
+  background: var(--coral);
 }
 ul.bullets.never li::before { background: var(--bad); }
 ul.bullets.ok li::before { background: var(--good); }
@@ -158,13 +150,13 @@ ul.bullets.ok li::before { background: var(--good); }
 
 /* hero card (privacy page top) */
 .hero {
-  background: var(--blue-soft);
-  border: 1px solid var(--blue-tint);
+  background: var(--coral-soft);
+  border: 1px solid var(--coral-tint);
   border-radius: 14px;
   padding: 18px 20px;
   margin: 24px 0 32px;
 }
-.hero .eyebrow { color: var(--blue); margin-bottom: 8px; }
+.hero .eyebrow { color: var(--coral-dark); margin-bottom: 8px; }
 .hero p { margin: 0; color: var(--ink-2); line-height: 1.55; }
 
 /* footer */
